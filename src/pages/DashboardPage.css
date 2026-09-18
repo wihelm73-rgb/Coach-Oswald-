@@ -1,0 +1,125 @@
+/* ===================== Tableau de bord ===================== */
+.dash-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+.empty { padding: 12px 0; }
+
+.dash-intro { margin-bottom: 22px; }
+.dash-intro h2 { color: var(--primary-gold); font-size: 28px; margin-bottom: 6px; }
+
+/* ---- KPI ---- */
+.kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 26px;
+}
+.kpi-card {
+  display: flex; align-items: center; gap: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px; padding: 18px 20px;
+}
+.kpi-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+.kpi-body { display: flex; flex-direction: column; min-width: 0; }
+.kpi-value { font-size: 26px; font-weight: bold; color: var(--light-text); }
+.kpi-value.sm { font-size: 16px; }
+.kpi-label { font-size: 13px; color: #b8b0a0; }
+
+/* ---- Grille panneaux ---- */
+.dash-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+.dash-panel {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 14px; padding: 22px;
+}
+.dash-panel.wide { grid-column: 1 / -1; }
+.dash-panel h3 {
+  display: flex; align-items: center; gap: 9px;
+  color: var(--primary-orange); font-size: 18px; margin-bottom: 18px;
+}
+
+/* ---- Graphe hebdo ---- */
+.week-chart { display: flex; align-items: flex-end; gap: 14px; height: 190px; }
+.week-col { flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; }
+.week-bar-wrap { flex: 1; width: 100%; display: flex; align-items: flex-end; justify-content: center; }
+.week-bar {
+  width: 60%; min-height: 4px;
+  background: linear-gradient(180deg, var(--primary-gold), var(--primary-orange));
+  border-radius: 5px 5px 0 0; position: relative; transition: height 0.3s ease;
+}
+.week-val { position: absolute; top: -20px; left: 50%; transform: translateX(-50%); font-size: 12px; font-weight: bold; color: var(--primary-gold); }
+.week-x { font-size: 11px; color: #b8b0a0; margin-top: 8px; }
+
+/* ---- Objectifs ---- */
+.goal-list { display: flex; flex-direction: column; gap: 16px; margin-bottom: 14px; }
+.goal-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
+.goal-label { font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 7px; }
+.trophy { color: var(--primary-gold); }
+.goal-bar { height: 10px; background: rgba(0, 0, 0, 0.4); border-radius: 5px; overflow: hidden; }
+.goal-fill { height: 100%; background: linear-gradient(90deg, var(--primary-orange), var(--primary-copper)); transition: width 0.3s ease; }
+.goal-fill.done { background: linear-gradient(90deg, #2ecc71, #27ae60); }
+.goal-foot { display: flex; justify-content: space-between; align-items: center; margin-top: 7px; }
+.goal-counter { display: flex; align-items: center; gap: 7px; font-size: 14px; }
+.goal-counter button {
+  width: 24px; height: 24px; border-radius: 6px;
+  background: rgba(255, 107, 53, 0.15); border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--primary-orange); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 11px;
+}
+.goal-counter button:hover { background: var(--primary-orange); color: #000; }
+.goal-sep { color: #6b6357; }
+.goal-counter input {
+  width: 56px; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text); padding: 4px 7px; border-radius: 6px; font-size: 13px;
+}
+.goal-unit { font-size: 12px; color: #b8b0a0; }
+.goal-pct { font-size: 14px; font-weight: bold; color: var(--primary-gold); }
+.goal-pct.done { color: #2ecc71; }
+
+/* ---- Habitudes ---- */
+.habit-head { display: flex; justify-content: flex-end; margin-bottom: 8px; }
+.habit-days { display: flex; gap: 8px; }
+.habit-head .habit-days span { width: 26px; text-align: center; font-size: 11px; color: #b8b0a0; }
+.habit-list { display: flex; flex-direction: column; gap: 12px; margin-bottom: 14px; }
+.habit { display: flex; align-items: center; gap: 12px; }
+.habit-label { flex: 1; font-size: 14px; display: flex; flex-direction: column; gap: 2px; }
+.streak { font-size: 11px; color: var(--primary-orange); display: inline-flex; align-items: center; gap: 4px; }
+.day-dot {
+  width: 26px; height: 26px; border-radius: 50%;
+  border: 2px solid rgba(212, 175, 55, 0.35); background: transparent; cursor: pointer; transition: all 0.15s ease;
+}
+.day-dot:hover { border-color: var(--primary-orange); }
+.day-dot.on { background: linear-gradient(135deg, var(--primary-gold), var(--primary-orange)); border-color: transparent; }
+
+.x-btn { background: none; border: none; color: #8a8276; cursor: pointer; padding: 4px; transition: color 0.15s ease; }
+.x-btn:hover { color: #ff6b6b; }
+
+/* ---- Ligne d'ajout ---- */
+.add-row { display: flex; gap: 8px; margin-top: 4px; }
+.add-row input {
+  flex: 1; background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text); padding: 9px 12px; border-radius: 8px; font-size: 14px; font-family: inherit;
+}
+.add-row input:focus { outline: none; border-color: var(--primary-orange); }
+.add-row button {
+  width: 40px; background: linear-gradient(135deg, var(--primary-orange), var(--primary-copper));
+  color: #000; border: none; border-radius: 8px; cursor: pointer; display: flex; align-items: center; justify-content: center;
+}
+.add-row button:hover { transform: translateY(-1px); }
+
+/* ---- Activité récente ---- */
+.activity { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.activity li { display: flex; align-items: center; gap: 12px; padding: 10px 12px; border-radius: 8px; transition: background 0.15s ease; }
+.activity li:hover { background: rgba(255, 255, 255, 0.04); }
+.act-ic { font-size: 18px; }
+.act-text { flex: 1; font-size: 14px; }
+.act-date { font-size: 12px; color: #b8b0a0; white-space: nowrap; }
+
+/* ---- Responsive ---- */
+@media (max-width: 880px) {
+  .dash-grid { grid-template-columns: 1fr; }
+}

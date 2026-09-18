@@ -1,0 +1,140 @@
+/* ===================== Page CGV/CGU ===================== */
+.cgv-page {
+  flex: 1;
+  padding: 24px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+
+/* ---- Bandeau d'avertissement ---- */
+.cgv-warning {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: rgba(231, 76, 60, 0.12);
+  border: 1px solid rgba(231, 76, 60, 0.45);
+  color: #ffb4ab;
+  border-radius: 10px;
+  padding: 12px 16px;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+.cgv-warning svg { flex-shrink: 0; font-size: 20px; }
+
+/* ---- Mise en page deux colonnes ---- */
+.cgv-layout {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+/* ---- Sommaire ---- */
+.cgv-toc {
+  position: sticky;
+  top: 0;
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 18px;
+}
+.cgv-toc h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-gold);
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+.cgv-toc ul { list-style: none; display: flex; flex-direction: column; gap: 2px; }
+.cgv-toc button {
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  border-left: 3px solid transparent;
+  color: var(--light-text);
+  padding: 7px 10px;
+  font-size: 13px;
+  cursor: pointer;
+  border-radius: 0 6px 6px 0;
+  transition: all 0.15s ease;
+  opacity: 0.8;
+}
+.cgv-toc button:hover { background: rgba(255, 107, 53, 0.12); opacity: 1; }
+.cgv-toc button.active {
+  border-left-color: var(--primary-orange);
+  color: var(--primary-orange);
+  background: rgba(255, 107, 53, 0.1);
+  font-weight: 600;
+  opacity: 1;
+}
+.btn-print {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-top: 16px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-copper));
+  color: #000;
+  border: none;
+  padding: 10px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-print:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3); }
+
+/* ---- Contenu ---- */
+.cgv-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 12px;
+  padding: 30px 34px;
+}
+.cgv-header { border-bottom: 2px solid rgba(212, 175, 55, 0.3); padding-bottom: 18px; margin-bottom: 8px; }
+.cgv-header h2 { color: var(--primary-gold); font-size: 26px; margin-bottom: 6px; }
+.cgv-date { color: var(--primary-orange); font-size: 13px; margin-bottom: 10px; }
+
+.cgv-article { padding: 18px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.06); scroll-margin-top: 12px; }
+.cgv-article:last-of-type { border-bottom: none; }
+.cgv-article h3 { color: var(--primary-orange); font-size: 18px; margin-bottom: 10px; }
+.cgv-article p { line-height: 1.7; margin-bottom: 10px; font-size: 15px; }
+.cgv-article p:last-child { margin-bottom: 0; }
+
+.legal-list { list-style: none; display: flex; flex-direction: column; gap: 6px; margin: 8px 0; }
+.legal-list li {
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  font-size: 14px;
+}
+.todo-field {
+  background: rgba(212, 175, 55, 0.18);
+  border: 1px dashed rgba(212, 175, 55, 0.6);
+  color: var(--primary-gold);
+  padding: 1px 8px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-style: italic;
+}
+
+.cgv-footer { margin-top: 24px; padding-top: 16px; border-top: 2px solid rgba(212, 175, 55, 0.3); color: #b8b0a0; font-size: 13px; text-align: center; }
+
+/* ---- Responsive ---- */
+@media (max-width: 860px) {
+  .cgv-layout { grid-template-columns: 1fr; }
+  .cgv-toc { position: static; }
+}
+
+/* ---- Impression ---- */
+@media print {
+  .sidebar, .header, .cgv-warning, .cgv-toc, .btn-print { display: none !important; }
+  .cgv-page, .cgv-content { padding: 0; border: none; background: #fff; color: #000; }
+  .cgv-layout { display: block; }
+  .cgv-header h2, .cgv-article h3 { color: #000; }
+  .todo-field { color: #000; border-color: #999; background: #f3f3f3; }
+}

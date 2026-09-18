@@ -1,0 +1,137 @@
+/* ===================== Page Messagerie ===================== */
+.messages-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+
+.msg-intro { margin-bottom: 26px; }
+.msg-intro h2 { color: var(--primary-gold); font-size: 26px; margin-bottom: 6px; }
+.muted { color: #b8b0a0; }
+
+/* ---- Cartes de canaux ---- */
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-bottom: 36px;
+}
+.channel-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+.channel-card:hover { transform: translateY(-4px); border-color: var(--primary-gold); }
+.channel-card h3 { font-size: 19px; }
+.channel-card p { font-size: 14px; flex: 1; }
+
+.channel-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
+  margin-bottom: 4px;
+}
+.channel-card.whatsapp .channel-icon { background: linear-gradient(135deg, #25d366, #128c7e); }
+.channel-card.call .channel-icon { background: linear-gradient(135deg, #25d366, #075e54); }
+.channel-card.meet .channel-icon { background: linear-gradient(135deg, #00897b, #1a73e8); }
+
+/* ---- Boutons ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.2s ease;
+  width: 100%;
+  justify-content: center;
+}
+.btn:hover:not(:disabled) { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn-wa { background: linear-gradient(135deg, #25d366, #128c7e); }
+.btn-call { background: linear-gradient(135deg, #34b7f1, #075e54); }
+.btn-meet { background: linear-gradient(135deg, #1a73e8, #00897b); }
+.btn .ext { font-size: 11px; opacity: 0.8; }
+
+.config-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--primary-gold);
+  margin-top: 2px;
+}
+
+/* ---- Composer ---- */
+.composer {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  padding: 22px;
+  max-width: 760px;
+}
+.composer h3 { color: var(--primary-gold); margin-bottom: 14px; font-size: 18px; }
+.quick-msgs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.quick-chip {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text);
+  padding: 7px 13px;
+  border-radius: 16px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+.quick-chip:hover { background: rgba(255, 107, 53, 0.18); border-color: var(--primary-orange); }
+
+.composer textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text);
+  border-radius: 10px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-family: inherit;
+  resize: vertical;
+}
+.composer textarea:focus { outline: none; border-color: var(--primary-orange); }
+.composer-actions { display: flex; justify-content: flex-end; margin-top: 14px; }
+.composer-actions .btn { width: auto; }
+
+.config-banner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  color: var(--primary-gold);
+  margin-top: 16px;
+}
+.config-banner code {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+}

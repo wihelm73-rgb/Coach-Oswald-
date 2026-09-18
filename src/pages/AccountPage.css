@@ -1,0 +1,93 @@
+/* ===================== Page Mon compte ===================== */
+.account-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+
+.account-intro { margin-bottom: 30px; }
+.account-intro h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-gold);
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.account-card {
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 24px 28px;
+}
+
+.account-login-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 18px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.25);
+  color: #b8b0a0;
+  font-size: 14px;
+}
+.account-login-info strong { color: var(--light-text); }
+
+.account-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.account-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.account-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--light-text);
+}
+
+.account-form input {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--primary-copper);
+  background: #111;
+  color: var(--light-text);
+  font-size: 15px;
+}
+
+.account-form input:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+}
+
+.account-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.account-saved {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #2ecc71;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .account-page { padding: 20px; }
+  .account-card { padding: 20px; }
+  .account-row { grid-template-columns: 1fr; }
+}

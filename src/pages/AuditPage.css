@@ -1,0 +1,159 @@
+/* ===================== Audit de positionnement ===================== */
+.audit-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+
+.audit-intro { margin-bottom: 24px; max-width: 820px; }
+.audit-intro h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--primary-gold);
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+.audit-intro p { line-height: 1.6; }
+
+.audit-banner {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  background: rgba(46, 204, 113, 0.12);
+  border: 1px solid rgba(46, 204, 113, 0.4);
+  color: var(--light-text);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 24px;
+  font-size: 14px;
+}
+.audit-banner svg { color: #2ecc71; flex-shrink: 0; }
+.audit-link-btn {
+  margin-left: auto;
+  background: none;
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  color: var(--primary-gold);
+  border-radius: 8px;
+  padding: 6px 14px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.audit-link-btn:hover { border-color: var(--primary-gold); }
+
+.audit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  max-width: 820px;
+}
+
+.audit-section {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  padding: 22px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.audit-section h3 { color: var(--primary-orange); font-size: 18px; }
+
+.audit-field { display: flex; flex-direction: column; gap: 6px; }
+.audit-field > span { font-weight: 600; font-size: 14px; }
+.audit-field small { color: #9d9482; font-size: 12px; }
+
+.audit-field input[type='text'],
+.audit-field textarea {
+  background: rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: var(--light-text);
+  font-size: 14px;
+  font-family: inherit;
+  resize: vertical;
+}
+.audit-field input[type='text']:focus,
+.audit-field textarea:focus {
+  outline: none;
+  border-color: var(--primary-gold);
+}
+
+.audit-range-row { display: flex; align-items: center; gap: 14px; }
+.audit-range-row input[type='range'] { flex: 1; accent-color: var(--primary-orange); }
+.audit-range-value {
+  min-width: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: var(--primary-gold);
+  font-size: 16px;
+}
+
+.audit-checkbox-list,
+.audit-radio-list { display: flex; flex-direction: column; gap: 10px; }
+.audit-checkbox,
+.audit-radio {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  line-height: 1.4;
+  cursor: pointer;
+}
+.audit-checkbox input,
+.audit-radio input { margin-top: 3px; accent-color: var(--primary-orange); flex-shrink: 0; }
+.audit-checkbox input:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.audit-rule {
+  background: rgba(212, 175, 55, 0.08);
+  border-left: 3px solid var(--primary-gold);
+  border-radius: 0 8px 8px 0;
+  padding: 12px 16px;
+  font-size: 13px;
+  line-height: 1.55;
+  color: #d8d0bf;
+}
+.audit-rule strong { color: var(--primary-gold); }
+
+.audit-actions { display: flex; justify-content: flex-end; }
+.audit-submit {
+  background: linear-gradient(135deg, var(--primary-orange), var(--primary-copper));
+  color: #000;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.audit-submit:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35); }
+
+.audit-footnote {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: #9d9482;
+  text-align: center;
+  justify-content: center;
+}
+.audit-footnote svg { color: var(--primary-gold); }
+
+.audit-reset {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: 1px solid rgba(255, 71, 87, 0.4);
+  color: #ff4757;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.audit-reset:hover { border-color: #ff4757; background: rgba(255, 71, 87, 0.08); }

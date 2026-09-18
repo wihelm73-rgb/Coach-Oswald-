@@ -1,0 +1,73 @@
+/* ===================== Page Tutos vidéo ===================== */
+.tutos-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+
+.tutos-intro { margin-bottom: 30px; }
+.tutos-intro h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary-gold);
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.empty { padding: 20px 0; }
+
+.tutos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.tuto-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tuto-video {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  display: block;
+}
+
+.tuto-body {
+  padding: 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tuto-body h3 {
+  color: var(--primary-orange);
+  font-size: 18px;
+}
+
+.tuto-description {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--light-text);
+}
+
+.tuto-date {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #b8b0a0;
+}
+
+@media (max-width: 768px) {
+  .tutos-page { padding: 20px; }
+  .tutos-grid { grid-template-columns: 1fr; }
+}

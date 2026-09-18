@@ -1,0 +1,155 @@
+/* ===================== Page Agenda & RDV ===================== */
+.agenda-page {
+  flex: 1;
+  padding: 28px 32px 60px;
+  overflow-y: auto;
+  color: var(--light-text);
+}
+.muted { color: #b8b0a0; }
+
+.agenda-intro { margin-bottom: 24px; }
+.agenda-intro h2 { color: var(--primary-gold); font-size: 28px; margin-bottom: 6px; }
+
+.agenda-layout {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 26px;
+  align-items: start;
+}
+
+/* ---- Formulaire ---- */
+.agenda-form-card {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 14px;
+  padding: 22px;
+  position: sticky;
+  top: 0;
+}
+.agenda-form-card h3 {
+  display: flex; align-items: center; gap: 9px;
+  color: var(--primary-gold); font-size: 18px; margin-bottom: 16px;
+}
+.field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 14px; }
+.field > span { font-size: 13px; color: var(--primary-gold); }
+.field input, .field select, .field textarea {
+  background: rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text);
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--primary-orange); }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.field textarea { resize: vertical; }
+
+.mode-toggle { display: flex; gap: 8px; }
+.mode-toggle button {
+  flex: 1;
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--light-text);
+  padding: 9px; border-radius: 8px; font-size: 14px; cursor: pointer; transition: all 0.15s ease;
+}
+.mode-toggle button.active {
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-copper));
+  color: #000; font-weight: bold; border-color: transparent;
+}
+
+.btn-add {
+  width: 100%;
+  display: inline-flex; align-items: center; justify-content: center; gap: 9px;
+  background: linear-gradient(90deg, var(--primary-orange), var(--primary-copper));
+  color: #000; border: none; padding: 12px; border-radius: 9px;
+  font-size: 15px; font-weight: bold; cursor: pointer; transition: all 0.2s ease;
+}
+.btn-add:hover { transform: translateY(-1px); box-shadow: 0 6px 16px rgba(255, 107, 53, 0.3); }
+
+/* ---- Disponibilités ---- */
+.dispo-block { margin-top: 22px; padding-top: 16px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.dispo-block h4 { display: flex; align-items: center; gap: 8px; color: var(--primary-orange); font-size: 15px; margin-bottom: 10px; }
+.dispo-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+.dispo-list li { display: flex; justify-content: space-between; gap: 12px; font-size: 13px; }
+.dispo-day { color: var(--primary-gold); font-weight: 600; min-width: 78px; }
+.dispo-slots { color: #b8b0a0; text-align: right; }
+
+/* ---- Liste RDV ---- */
+.agenda-list h3 {
+  display: flex; align-items: center; gap: 9px;
+  color: var(--primary-orange); font-size: 19px; margin: 0 0 14px;
+}
+.agenda-list .count {
+  background: rgba(255, 107, 53, 0.2); color: var(--primary-orange);
+  border-radius: 10px; padding: 1px 9px; font-size: 13px;
+}
+.past-title { margin-top: 28px !important; opacity: 0.85; }
+.empty { padding: 14px 0; }
+
+.reminder-banner {
+  display: flex; align-items: center; gap: 10px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-radius: 10px; padding: 12px 16px; font-size: 13px;
+  color: #e8dcc0; margin-bottom: 22px;
+}
+.reminder-banner svg { color: var(--primary-gold); flex-shrink: 0; font-size: 18px; }
+
+/* ---- Carte RDV ---- */
+.rdv-card {
+  display: flex; gap: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.22);
+  border-radius: 12px; padding: 16px; margin-bottom: 12px;
+  transition: border-color 0.2s ease;
+}
+.rdv-card:hover { border-color: var(--primary-gold); }
+.rdv-card.past { opacity: 0.7; }
+.rdv-card.cancelled { opacity: 0.55; }
+
+.rdv-date-box {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-width: 64px; height: 64px;
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(255, 107, 53, 0.18));
+  border-radius: 10px; flex-shrink: 0;
+}
+.rdv-day { font-size: 24px; font-weight: bold; color: var(--primary-gold); line-height: 1; }
+.rdv-month { font-size: 12px; color: var(--primary-orange); text-transform: uppercase; }
+
+.rdv-info { flex: 1; min-width: 0; }
+.rdv-top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 6px; }
+.rdv-top strong { font-size: 16px; }
+.status { font-size: 11px; font-weight: bold; padding: 2px 10px; border-radius: 10px; white-space: nowrap; }
+.st-demande { background: rgba(241, 196, 15, 0.2); color: #f1c40f; }
+.st-confirme { background: rgba(46, 204, 113, 0.2); color: #2ecc71; }
+.st-annule { background: rgba(231, 76, 60, 0.2); color: #ff6b6b; }
+
+.rdv-meta { display: flex; gap: 16px; font-size: 13px; color: #b8b0a0; margin-bottom: 8px; flex-wrap: wrap; }
+.rdv-meta span { display: inline-flex; align-items: center; gap: 6px; }
+.rdv-note { font-size: 13px; color: #cfc6b5; margin-bottom: 10px; }
+
+.rdv-actions { display: flex; flex-wrap: wrap; gap: 7px; }
+.mini-btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  color: var(--light-text);
+  padding: 6px 11px; border-radius: 7px; font-size: 12.5px; cursor: pointer;
+  text-decoration: none; transition: all 0.15s ease;
+}
+.mini-btn:hover { background: rgba(255, 255, 255, 0.14); border-color: var(--primary-gold); }
+.mini-btn.wa { border-color: rgba(37, 211, 102, 0.5); color: #25d366; }
+.mini-btn.wa:hover { background: rgba(37, 211, 102, 0.15); }
+.mini-btn.ok { border-color: rgba(46, 204, 113, 0.5); color: #2ecc71; }
+.mini-btn.ok:hover { background: rgba(46, 204, 113, 0.15); }
+.mini-btn.ko { border-color: rgba(231, 76, 60, 0.45); color: #ff8a7a; }
+.mini-btn.ko:hover { background: rgba(231, 76, 60, 0.15); }
+.mini-btn.danger:hover { background: rgba(231, 76, 60, 0.2); color: #ff6b6b; }
+
+/* ---- Responsive ---- */
+@media (max-width: 880px) {
+  .agenda-layout { grid-template-columns: 1fr; }
+  .agenda-form-card { position: static; }
+}
