@@ -4,10 +4,32 @@
 
 | Métrique | Valeur |
 |----------|--------|
-| **Sessions** | 5 |
-| **Temps Total Passé** | ~420-470 min (~7h00-7h50) |
-| **Tokens Utilisés (cumul)** | ~740,000 (estimation) |
-| **Coût Total (cumul)** | **~€11.70** (estimation) |
+| **Sessions** | 6 |
+| **Temps Total Passé** | ~430-480 min (~7h10-8h00) |
+| **Tokens Utilisés (cumul)** | ~760,000 (estimation) |
+| **Coût Total (cumul)** | **~€11.90** (estimation) |
+
+---
+
+# 🗓️ Session 6 — 2026-11-23
+
+## 📊 Session Overview
+
+| Métrique | Valeur |
+|----------|--------|
+| **Date** | 2026-11-23 |
+| **Durée** | ~10 min (estimation) |
+| **Tokens Utilisés** | ~20,000 (estimation) |
+
+## 💵 Coûts Financiers
+
+| Élément | Coût |
+|--------|------|
+| **Coût Total Session** | **~€0.20** (estimation) |
+
+## ✅ Ce qui a été réalisé
+
+- ✅ Mentions légales (page CGV/S) entièrement renseignées : statut, SIRET, adresse, e-mail, téléphone, n° de contrat RC Pro ; date de mise à jour actualisée
 
 ---
 
@@ -232,4 +254,4 @@
 
 ---
 
-**Dernière mise à jour**: 2026-08-21 · Session 5 · ~180-210 min · ~€4.80 (est.) · Commandes Claude Code (/tester, /modifier-texte, /publier, /deployer, /ajouter-tuto, /maj-budget) + Auth bouchonnée + Supabase (setup) + Pages Tutos vidéo & Mon compte
+**Dernière mise à jour**: 2026-11-23 · Session 6 · ~10 min · ~€0.20 (est.) · Mentions légales CGV/S complétées

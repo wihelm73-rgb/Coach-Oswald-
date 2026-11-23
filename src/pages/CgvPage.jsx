@@ -8,13 +8,13 @@ import './CgvPage.css';
  * ===================================================================== */
 const LEGAL = {
   raisonSociale: 'Coach Oswald',
-  statut: 'À compléter (ex : Entrepreneur individuel / micro-entreprise)',
-  siret: 'À compléter',
-  adresse: 'À compléter',
-  email: 'À compléter',
-  telephone: 'À compléter',
-  assurance: 'À compléter (assureur RC Pro + n° de contrat)',
-  dateMaj: '12 juin 2026',
+  statut: 'Entrepreneur individuel — micro-entrepreneur (profession libérale), code NAF 8559B (Autres enseignements)',
+  siret: '788 820 595 00023',
+  adresse: '3 route du Vignolet, 79500 Marcille',
+  email: 'coach.oswald@yahoo.com',
+  telephone: '06 88 74 74 12',
+  assurance: 'AXA — contrat RC Pro n° 0000011180888904',
+  dateMaj: '23 novembre 2026',
 };
 
 const isTodo = (v) => typeof v === 'string' && v.toLowerCase().startsWith('à compléter');
