@@ -29,6 +29,7 @@
 
 ## ✅ Ce qui a été réalisé
 
+- ✅ Workflow GitHub Actions de déploiement automatique sur OVH (FTPS) à chaque push sur main
 - ✅ Mentions légales (page CGV/S) entièrement renseignées : statut, SIRET, adresse, e-mail, téléphone, n° de contrat RC Pro ; date de mise à jour actualisée
 
 ---

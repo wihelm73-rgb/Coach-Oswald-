@@ -1,0 +1,36 @@
+name: Déploiement OVH
+
+# Construit le site et envoie le contenu de dist/ sur l'hébergement OVH
+# à chaque push sur main (ou à la demande depuis l'onglet Actions).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy-ovh
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Envoi sur OVH (FTPS)
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.OVH_HOST }}
+          username: ${{ secrets.OVH_USER }}
+          password: ${{ secrets.OVH_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ secrets.OVH_REMOTE_PATH }}
