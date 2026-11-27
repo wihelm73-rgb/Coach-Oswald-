@@ -4,10 +4,33 @@
 
 | Métrique | Valeur |
 |----------|--------|
-| **Sessions** | 6 |
-| **Temps Total Passé** | ~430-480 min (~7h10-8h00) |
-| **Tokens Utilisés (cumul)** | ~760,000 (estimation) |
-| **Coût Total (cumul)** | **~€11.90** (estimation) |
+| **Sessions** | 7 |
+| **Temps Total Passé** | ~440-490 min (~7h20-8h10) |
+| **Tokens Utilisés (cumul)** | ~780,000 (estimation) |
+| **Coût Total (cumul)** | **~€12.10** (estimation) |
+
+---
+
+# 🗓️ Session 7 — 2026-11-27
+
+## 📊 Session Overview
+
+| Métrique | Valeur |
+|----------|--------|
+| **Date** | 2026-11-27 |
+| **Durée** | ~10 min (estimation) |
+| **Tokens Utilisés** | ~20,000 (estimation) |
+
+## 💵 Coûts Financiers
+
+| Élément | Coût |
+|--------|------|
+| **Coût Total Session** | **~€0.20** (estimation) |
+
+## ✅ Ce qui a été réalisé
+
+- ✅ Page d'accueil : retrait de la fourchette tarifaire annuelle (15 à 40 k€)
+- ✅ Pages Accueil et Offres : retrait du mot « annuels » dans la mention des programmes sur mesure
 
 ---
 
@@ -255,4 +278,4 @@
 
 ---
 
-**Dernière mise à jour**: 2026-11-23 · Session 6 · ~10 min · ~€0.20 (est.) · Mentions légales CGV/S complétées
+**Dernière mise à jour**: 2026-11-27 · Session 7 · ~10 min · ~€0.20 (est.) · Retrait de la tarification annuelle

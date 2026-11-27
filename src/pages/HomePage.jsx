@@ -126,13 +126,13 @@ export default function HomePage() {
                 <li>
                   <strong>Optimisation de Capital :</strong> un investissement haut de gamme pensé pour
                   sécuriser votre santé, maximiser votre lucidité stratégique et pérenniser vos performances
-                  de leadership (programmes annuels de 15k€ à 40k€).
+                  de leadership.
                 </li>
               </ul>
             </div>
 
             <p className="coach-footer-note">
-              Programmes d'Accompagnement Annuels sur Mesure • Accès Privé & Sécurisé
+              Programmes d'Accompagnement sur Mesure • Accès Privé & Sécurisé
             </p>
           </div>
         </div>

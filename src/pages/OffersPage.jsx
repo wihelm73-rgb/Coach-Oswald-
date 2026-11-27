@@ -97,7 +97,7 @@ export default function OffersPage({ onSelectProtocol }) {
             </div>
           ))}
         </div>
-        <p className="executive-footnote">Programmes d'accompagnement annuels sur mesure • Accès privé & sécurisé</p>
+        <p className="executive-footnote">Programmes d'accompagnement sur mesure • Accès privé & sécurisé</p>
       </section>
 
       <p className="offers-footnote">
